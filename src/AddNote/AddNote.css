@@ -1,0 +1,29 @@
+.AddNote {
+  color: whitesmoke;
+  margin-left: 10px;
+}
+
+.newNote {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  width: 70%;
+  margin: 5px 0;
+}
+textarea {
+  width: 80%;
+  height: 200px;
+  resize: none;
+  margin: 5px 0;
+}
+
+button {
+  width: 10%;
+  margin: 5px 0;
+  background-color: whitesmoke;
+  padding: 5px;
+  font-size: 1em;
+}

@@ -1,0 +1,46 @@
+.App {
+  --custom-font: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Satisfy', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, cursive;
+  display: grid;
+  grid-template-areas: 'sidebar header' 'sidebar main';
+  grid-template-columns: 1fr 2.3fr;
+  grid-template-rows: 120px 1fr;
+  min-height: 100vh;
+}
+
+.App__nav {
+  background-color: white;
+  grid-area: sidebar;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.siteTitle {
+  font-family: 'Merienda', cursive;
+  font-size: 2.7em;
+  margin-top: 0;
+}
+
+.App__header {
+  background-color: white;
+  grid-area: header;
+  padding-left: 16px;
+  padding-top: 32px;
+}
+
+.App__header a {
+  color: rgb(110, 151, 151);
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.App__main {
+  background-color: #a4b2b5;
+  grid-area: main;
+  height: calc(100vh - 120px);
+  overflow: auto;
+}
