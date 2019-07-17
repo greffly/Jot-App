@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import PropTypes from 'prop-types';
 import './AddNote.css';
 
 export default class AddNote extends Component {
+  //would I need proptypes in this class? It doesn't seem to want to let me add it unless it's a function.
   state = {
     noteName: '',
     noteContent: '',
@@ -26,6 +28,7 @@ export default class AddNote extends Component {
     }
   }
   render() {
+    const currentDate = new Date();
     const folders = this.props.folders.map((folder, i) => <option value={folder.name} key={folder.id}>{folder.name}</option>);
     return (
       <div className='AddNote'>
@@ -58,10 +61,11 @@ export default class AddNote extends Component {
             onChange={e => this.selectFolder(e.target.value)} >
             <option value='None'>Select a Folder...</option>
             {folders}
-            </select>
+          </select>
+          <div className='Note__dates' value={currentDate}/>
           <button type='submit' onClick={() => this.props.history.goBack()}>Add!</button>
         </form>
-      </div>
+        </div>
     );
   }
 }

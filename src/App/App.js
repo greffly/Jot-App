@@ -21,6 +21,11 @@ class App extends Component {
       selected
     });
   }
+  setFolders(folders) {
+    this.setState({
+      folders
+    })
+  }
   componentDidMount() {
     // fake date loading from API call
     setTimeout(() => this.setState(dummyStore), 600);
@@ -93,7 +98,7 @@ class App extends Component {
         <Route
           path='/add-folder'
           render={routeProps => (
-            <AddFolder addFolder={this.addFolder} {...routeProps} />
+            <AddFolder addFolder={this.addFolder} {...routeProps} changeHandler={folders => this.setFolders(folders)}/>
           )}
         />
         <Route

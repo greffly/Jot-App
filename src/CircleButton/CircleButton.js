@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './CircleButton.css'
 
 export default function NavCircleButton(props) {
@@ -12,8 +13,16 @@ export default function NavCircleButton(props) {
     },
     props.children
   )
+  
 }
 
 NavCircleButton.defaultProps ={
   tag: 'a',
 }
+
+  //am I using proptypes correctly here?
+  NavCircleButton.propTypes = {
+    folders: PropTypes.object,
+    className: PropTypes.string
+    //need to find type of tag, children
+  }

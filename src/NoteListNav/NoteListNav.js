@@ -2,12 +2,14 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CircleButton from '../CircleButton/CircleButton'
+import HandleFolderError from '../HandleErrors/HandleFolderError'
 import { countNotesForFolder } from '../notes-helpers'
 import './NoteListNav.css'
 
 export default function NoteListNav(props) {
   return (
     <div className='NoteListNav'>
+      <HandleFolderError>
       <ul className='NoteListNav__list'>
         {props.folders.map(folder =>
           <li key={folder.id}>
@@ -23,6 +25,7 @@ export default function NoteListNav(props) {
           </li>
         )}
       </ul>
+      </HandleFolderError>
       <div className='NoteListNav__button-wrapper'>
         <CircleButton
           tag={Link}

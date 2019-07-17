@@ -2,12 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Note from '../Note/Note'
+import HandleNoteError from '../HandleErrors/HandleNoteError';
 import CircleButton from '../CircleButton/CircleButton'
 import './NoteListMain.css'
 
 export default function NoteListMain(props) {
   return (
     <section className='NoteListMain'>
+      <HandleNoteError>
       <ul>
         {props.notes.map(note =>
           <li key={note.id}>
@@ -19,6 +21,7 @@ export default function NoteListMain(props) {
           </li>
         )}
       </ul>
+      </HandleNoteError>
       <div className='NoteListMain__button-container'>
         <CircleButton
           tag={Link}
