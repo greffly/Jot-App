@@ -107,7 +107,7 @@ class App extends Component {
             <AddNote
               addNote={this.addNote}
               {...routeProps}
-              folders={dummyStore.folders}
+              folders={this.state.folders}
               changeHandler={selected => this.setSelected(selected)}
             />
           )}

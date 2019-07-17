@@ -4,7 +4,7 @@ import './CircleButton.css'
 
 export default function NavCircleButton(props) {
   const { tag, className, childrenm, ...otherProps } = props
-
+  console.log(props.children);
   return React.createElement(
     props.tag,
     {
@@ -13,16 +13,13 @@ export default function NavCircleButton(props) {
     },
     props.children
   )
-  
 }
 
 NavCircleButton.defaultProps ={
   tag: 'a',
 }
 
-  //am I using proptypes correctly here?
-  NavCircleButton.propTypes = {
-    folders: PropTypes.object,
-    className: PropTypes.string
-    //need to find type of tag, children
-  }
+NavCircleButton.propTypes = {
+  folders: PropTypes.object,
+  className: PropTypes.string,
+}

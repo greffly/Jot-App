@@ -8,7 +8,7 @@ export default class AddNote extends Component {
   state = {
     noteName: '',
     noteContent: '',
-    folderName: ''
+    folderId: ''
   };
   submitForm = e => {
     e.preventDefault();
@@ -16,20 +16,24 @@ export default class AddNote extends Component {
       id: uuid(),
       name: this.state.noteName,
       content: this.state.noteContent,
-      folder: this.state.folderName
+      folderId: this.state.folderId,
+      modified: (new Date()).toISOString()
     });
   };
   selectFolder(value) {
     if (value === 'None') {
       this.props.changeHandler(null);
     } else {
+      this.setState({
+        folderId: value
+      });
       const folder = this.props.folders.find(folder => folder.name === value);
       this.props.changeHandler(folder);
     }
   }
   render() {
     const currentDate = new Date();
-    const folders = this.props.folders.map((folder, i) => <option value={folder.name} key={folder.id}>{folder.name}</option>);
+    const folders = this.props.folders.map((folder, i) => <option value={folder.id} key={folder.id}>{folder.name}</option>);
     return (
       <div className='AddNote'>
         <h1>Add a Note</h1>
@@ -57,9 +61,9 @@ export default class AddNote extends Component {
           <select
             id='folder'
             name='folder'
-            value={this.state.folderName}
+            value={this.state.folderId}
             onChange={e => this.selectFolder(e.target.value)} >
-            <option value='None'>Select a Folder...</option>
+            <option value="">Select a Folder...</option>
             {folders}
           </select>
           <div className='Note__dates' value={currentDate}/>
@@ -68,4 +72,10 @@ export default class AddNote extends Component {
         </div>
     );
   }
+}
+
+AddNote.propTypes = {
+  folders: PropTypes.object,
+  changeHandler: PropTypes.func,
+  addNote: PropTypes.func
 }
