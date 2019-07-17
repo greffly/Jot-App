@@ -59,7 +59,7 @@ export default class AddNote extends Component {
             <option value='None'>Select a Folder...</option>
             {folders}
             </select>
-          <button type='submit'>Add!</button>
+          <button type='submit' onClick={() => this.props.history.goBack()}>Add!</button>
         </form>
       </div>
     );
