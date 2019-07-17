@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
+import ValidationError from '../HandleErrors/ValidationError'
 import './AddNote.css';
 
 export default class AddNote extends Component {
   //would I need proptypes in this class? It doesn't seem to want to let me add it unless it's a function.
   state = {
-    noteName: '',
+    noteName: {value: '', touched: false},
     noteContent: '',
     folderId: ''
   };
@@ -31,6 +32,15 @@ export default class AddNote extends Component {
       this.props.changeHandler(folder);
     }
   }
+  validateName(noteName) {
+    const name = this.state.noteName.value;
+    if (name.length === 0) {
+      return 'Note name is required';
+    } 
+  }
+  updateName(noteName) {
+    this.setState({noteName: {value: noteName, touched: true}});
+  }
   render() {
     const currentDate = new Date();
     const folders = this.props.folders.map((folder, i) => <option value={folder.id} key={folder.id}>{folder.name}</option>);
@@ -48,6 +58,9 @@ export default class AddNote extends Component {
               })
             }
           />
+          {this.state.noteName.touched && (
+          <ValidationError message={this.validateName()} />
+          )}
           <textarea
             type='text'
             placeholder='Note Content'
@@ -67,7 +80,8 @@ export default class AddNote extends Component {
             {folders}
           </select>
           <div className='Note__dates' value={currentDate}/>
-          <button type='submit' onClick={() => this.props.history.goBack()}>Add!</button>
+          <button type='submit' disabled={
+    this.validateName()} onClick={() => this.props.history.goBack()}>Add!</button>
         </form>
         </div>
     );

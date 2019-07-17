@@ -4,7 +4,7 @@
     sans-serif, cursive;
   display: grid;
   grid-template-areas: 'sidebar header' 'sidebar main';
-  grid-template-columns: 1fr 2.3fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: 120px 1fr;
   min-height: 100vh;
 }
@@ -20,7 +20,7 @@
 }
 
 .siteTitle {
-  font-family: 'Merienda', cursive;
+  font-family: 'Crimson Text', serif;
   font-size: 2.7em;
   margin-top: 0;
 }
