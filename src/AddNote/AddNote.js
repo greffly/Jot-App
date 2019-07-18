@@ -5,7 +5,6 @@ import ValidationError from '../HandleErrors/ValidationError'
 import './AddNote.css';
 
 export default class AddNote extends Component {
-  //would I need proptypes in this class? It doesn't seem to want to let me add it unless it's a function.
   state = {
     noteName: {value: '', touched: false},
     noteContent: '',
@@ -15,7 +14,7 @@ export default class AddNote extends Component {
     e.preventDefault();
     this.props.addNote({
       id: uuid(),
-      name: this.state.noteName,
+      name: this.state.noteName.value,
       content: this.state.noteContent,
       folderId: this.state.folderId,
       modified: (new Date()).toISOString()
