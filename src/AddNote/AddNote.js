@@ -32,14 +32,12 @@ export default class AddNote extends Component {
       this.props.changeHandler(folder);
     }
   }
-  validateName(noteName) {
+  validateName({noteName}) {
     const name = this.state.noteName.value;
+    console.log('name', name);
     if (name.length === 0) {
       return 'Note name is required';
     } 
-  }
-  updateName(noteName) {
-    this.setState({noteName: {value: noteName, touched: true}});
   }
   render() {
     const currentDate = new Date();
@@ -51,15 +49,15 @@ export default class AddNote extends Component {
           <input
             type='text'
             placeholder='My New Note'
-            value={this.state.noteName}
+            value={this.state.noteName.value}
             onChange={e =>
               this.setState({
-                noteName: e.target.value
+                noteName: {value: e.target.value, touched: true}
               })
             }
           />
           {this.state.noteName.touched && (
-          <ValidationError message={this.validateName()} />
+          <ValidationError message={this.validateName(this.state.noteName.value)} />
           )}
           <textarea
             type='text'
@@ -81,7 +79,7 @@ export default class AddNote extends Component {
           </select>
           <div className='Note__dates' value={currentDate}/>
           <button type='submit' disabled={
-    this.validateName()} onClick={() => this.props.history.goBack()}>Add!</button>
+    this.validateName(this.state.noteName)} onClick={() => this.props.history.goBack()}>Add!</button>
         </form>
         </div>
     );
@@ -89,7 +87,6 @@ export default class AddNote extends Component {
 }
 
 AddNote.propTypes = {
-  folders: PropTypes.object,
   changeHandler: PropTypes.func,
   addNote: PropTypes.func
 }
