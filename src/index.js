@@ -11,8 +11,13 @@ import App from './App/App'
 
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
 
+export default function Routes() {
+  const history = createHistory({
+    basename: process.env.PUBLIC_URL,
+  });
+
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>,
   document.getElementById('root')
