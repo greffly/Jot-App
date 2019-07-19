@@ -2,7 +2,7 @@
   "name": "noteful-client",
   "version": "0.1.0",
   "private": false,
-  "homepage" : "http://greffly.github.io/Jot-Notes-App",
+  "homepage": "http://greffly.github.io/Jot-Notes-App",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -23,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "preserve": "npm run build"
+    "preserve": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +40,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
+    "gh-pages": "^2.0.1",
     "serve": "^11.1.0"
   }
 }
