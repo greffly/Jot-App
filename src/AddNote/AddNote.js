@@ -42,10 +42,13 @@ export default class AddNote extends Component {
     const currentDate = new Date();
     const folders = this.props.folders.map((folder, i) => <option value={folder.id} key={folder.id}>{folder.name}</option>);
     return (
-      <div className='AddNote'>
+      <div className='AddNote' id='addNote'>
         <h1>Add a Note</h1>
         <form action='' className='newNote' onSubmit={this.submitForm}>
           <input
+            htmlFor='noteName'
+            aria-label='Title of new note'
+            aria-required='true'
             type='text'
             placeholder='My New Note'
             value={this.state.noteName.value}
@@ -59,6 +62,8 @@ export default class AddNote extends Component {
           <ValidationError message={this.validateName(this.state.noteName.value)} />
           )}
           <textarea
+            htmlFor='noteContent'
+            aria-label='Note Contents'
             type='text'
             placeholder='Note Content'
             value={this.state.noteContent}
@@ -69,6 +74,8 @@ export default class AddNote extends Component {
             }
           />
           <select
+            htmlFor='folderName'
+            aria-label='Select Folder for Note to go into'
             id='folder'
             name='folder'
             value={this.state.folderId}
@@ -76,11 +83,10 @@ export default class AddNote extends Component {
             <option value="">Select a Folder...</option>
             {folders}
           </select>
-          <div className='Note__dates' value={currentDate}/>
           <button type='submit' disabled={
     this.validateName(this.state.noteName)} onClick={() => this.props.history.goBack()}>Add!</button>
         </form>
-        </div>
+      </div>
     );
   }
 }
