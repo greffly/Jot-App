@@ -12,7 +12,7 @@ import App from './App/App'
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>,
   document.getElementById('root')
