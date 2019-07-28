@@ -9,6 +9,7 @@ import './NoteListMain.css'
 export default function NoteListMain(props) {
   return (
     <section className='NoteListMain'>
+      <HandleNoteError>
       <ul>
         {props.notes.map(note =>
           <li key={note.id}>
@@ -20,6 +21,7 @@ export default function NoteListMain(props) {
           </li>
         )}
       </ul>
+      </HandleNoteError>
       <div className='NoteListMain__button-container'>
         <CircleButton
           tag={Link}
