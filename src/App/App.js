@@ -72,7 +72,7 @@ class App extends Component {
   }
 
   renderMainRoutes() {
-    const { notes } = this.state;
+    const { notes, folders } = this.state;
     return (
       <>
         {['/', '/folder/:folderId'].map(path => (

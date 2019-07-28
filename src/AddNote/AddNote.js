@@ -5,6 +5,7 @@ import ValidationError from '../HandleErrors/ValidationError'
 import './AddNote.css';
 
 export default class AddNote extends Component {
+  //would I need proptypes in this class? It doesn't seem to want to let me add it unless it's a function.
   state = {
     noteName: {value: '', touched: false},
     noteContent: '',
@@ -14,7 +15,7 @@ export default class AddNote extends Component {
     e.preventDefault();
     this.props.addNote({
       id: uuid(),
-      name: this.state.noteName.value,
+      name: this.state.noteName,
       content: this.state.noteContent,
       folderId: this.state.folderId,
       modified: (new Date()).toISOString()
@@ -42,13 +43,10 @@ export default class AddNote extends Component {
     const currentDate = new Date();
     const folders = this.props.folders.map((folder, i) => <option value={folder.id} key={folder.id}>{folder.name}</option>);
     return (
-      <div className='AddNote' id='addNote'>
+      <div className='AddNote'>
         <h1>Add a Note</h1>
         <form action='' className='newNote' onSubmit={this.submitForm}>
           <input
-            htmlFor='noteName'
-            aria-label='Title of new note'
-            aria-required='true'
             type='text'
             placeholder='My New Note'
             value={this.state.noteName.value}
@@ -62,8 +60,6 @@ export default class AddNote extends Component {
           <ValidationError message={this.validateName(this.state.noteName.value)} />
           )}
           <textarea
-            htmlFor='noteContent'
-            aria-label='Note Contents'
             type='text'
             placeholder='Note Content'
             value={this.state.noteContent}
@@ -74,8 +70,6 @@ export default class AddNote extends Component {
             }
           />
           <select
-            htmlFor='folderName'
-            aria-label='Select Folder for Note to go into'
             id='folder'
             name='folder'
             value={this.state.folderId}
@@ -83,10 +77,11 @@ export default class AddNote extends Component {
             <option value="">Select a Folder...</option>
             {folders}
           </select>
+          <div className='Note__dates' value={currentDate}/>
           <button type='submit' disabled={
     this.validateName(this.state.noteName)} onClick={() => this.props.history.goBack()}>Add!</button>
         </form>
-      </div>
+        </div>
     );
   }
 }

@@ -32,9 +32,8 @@ export default function Note(props) {
 }
 
 
-
-Note.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  modified: PropTypes.string
-}
+// Note.propTypes = {
+//   id: PropTypes.string,
+//   name: PropTypes.string,
+//   modified: PropTypes.string
+// }

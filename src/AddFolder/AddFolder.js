@@ -19,13 +19,11 @@ export default class AddFolder extends Component {
   };
   render() {
     return (
-      <div className='addFolder' id='addFolder'>
+      <div className='addFolder'>
         <h1>Add a Folder</h1>
         <form action='' className='newFolder' onSubmit={this.submitForm}>
           <input
-            htmlFor='folderName'
             type='text'
-            aria-label='Folder name'
             placeholder='My New Folder'
             value={this.state.folderName}
             onChange={e => this.setState({ folderName: e.target.value })}
