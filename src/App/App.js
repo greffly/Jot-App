@@ -24,7 +24,7 @@ class App extends Component {
   setFolders(folders) {
     this.setState({
       folders
-    })
+    });
   }
   componentDidMount() {
     // fake date loading from API call
@@ -98,7 +98,11 @@ class App extends Component {
         <Route
           path='/add-folder'
           render={routeProps => (
-            <AddFolder addFolder={this.addFolder} {...routeProps} changeHandler={folders => this.setFolders(folders)}/>
+            <AddFolder
+              addFolder={this.addFolder}
+              {...routeProps}
+              changeHandler={folders => this.setFolders(folders)}
+            />
           )}
         />
         <Route
@@ -122,7 +126,7 @@ class App extends Component {
         <nav className='App__nav'>{this.renderNavRoutes()}</nav>
         <header className='App__header'>
           <h1 className='siteTitle'>
-            <Link to='/'>Jot</Link>
+            <Link to='/'>Jotty</Link>
           </h1>
         </header>
         <main className='App__main'>{this.renderMainRoutes()}</main>
