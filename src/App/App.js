@@ -7,6 +7,8 @@ import NotePageMain from '../NotePageMain/NotePageMain';
 import AddFolder from '../AddFolder/AddFolder';
 import AddNote from '../AddNote/AddNote';
 import dummyStore from '../dummy-store';
+import CircleButton from '../CircleButton/CircleButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getNotesForFolder, findNote, findFolder } from '../notes-helpers';
 import './App.css';
 
@@ -126,9 +128,31 @@ class App extends Component {
         <nav className='App__nav'>{this.renderNavRoutes()}</nav>
         <header className='App__header'>
           <h1 className='siteTitle'>
-            <Link to='/'>Jotty</Link>
+            <Link to='/'>Jot</Link>
           </h1>
         </header>
+        <div className='NoteListMain__button-container'>
+          <CircleButton
+            tag={Link}
+            to='/add-note'
+            type='button'
+            className='NoteListMain__add-note-button'
+          >
+            <FontAwesomeIcon icon='plus' />
+            <br />
+            Note
+          </CircleButton>
+          <CircleButton
+            tag={Link}
+            to='/add-folder'
+            type='button'
+            className='NoteListNav__add-folder-button'
+          >
+            <FontAwesomeIcon icon='plus' />
+            <br />
+            Folder
+          </CircleButton>
+        </div>
         <main className='App__main'>{this.renderMainRoutes()}</main>
       </div>
     );

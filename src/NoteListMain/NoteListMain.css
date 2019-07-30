@@ -1,19 +1,21 @@
-
 .NoteListMain ul {
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 17px;
+  background-image: linear-gradient(to right, gainsboro, white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  grid-gap: 20px;
 }
 
 .NoteListMain__button-container {
-  max-width: 380px;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .NoteListMain__add-note-button {
   margin: 0 auto 20px;
 }
-.NoteListMain__add-note-button:hover {
-  background-color: #29862e;
-  color: white;
+
+.Note {
+  justify-self: center;
 }

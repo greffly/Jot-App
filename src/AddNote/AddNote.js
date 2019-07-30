@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
-import ValidationError from '../HandleErrors/ValidationError'
+import ValidationError from '../HandleErrors/ValidationError';
 import './AddNote.css';
 
 export default class AddNote extends Component {
   //would I need proptypes in this class? It doesn't seem to want to let me add it unless it's a function.
   state = {
-    noteName: {value: '', touched: false},
+    noteName: { value: '', touched: false },
     noteContent: '',
     folderId: ''
   };
@@ -18,7 +18,7 @@ export default class AddNote extends Component {
       name: this.state.noteName,
       content: this.state.noteContent,
       folderId: this.state.folderId,
-      modified: (new Date()).toISOString()
+      modified: new Date().toISOString()
     });
   };
   selectFolder(value) {
@@ -32,16 +32,20 @@ export default class AddNote extends Component {
       this.props.changeHandler(folder);
     }
   }
-  validateName({noteName}) {
+  validateName({ noteName }) {
     const name = this.state.noteName.value;
     console.log('name', name);
     if (name.length === 0) {
       return 'Note name is required';
-    } 
+    }
   }
   render() {
     const currentDate = new Date();
-    const folders = this.props.folders.map((folder, i) => <option value={folder.id} key={folder.id}>{folder.name}</option>);
+    const folders = this.props.folders.map((folder, i) => (
+      <option value={folder.id} key={folder.id}>
+        {folder.name}
+      </option>
+    ));
     return (
       <div className='AddNote'>
         <h1>Add a Note</h1>
@@ -52,12 +56,14 @@ export default class AddNote extends Component {
             value={this.state.noteName.value}
             onChange={e =>
               this.setState({
-                noteName: {value: e.target.value, touched: true}
+                noteName: { value: e.target.value, touched: true }
               })
             }
           />
           {this.state.noteName.touched && (
-          <ValidationError message={this.validateName(this.state.noteName.value)} />
+            <ValidationError
+              message={this.validateName(this.state.noteName.value)}
+            />
           )}
           <textarea
             type='text'
@@ -73,15 +79,21 @@ export default class AddNote extends Component {
             id='folder'
             name='folder'
             value={this.state.folderId}
-            onChange={e => this.selectFolder(e.target.value)} >
-            <option value="">Select a Folder...</option>
+            onChange={e => this.selectFolder(e.target.value)}
+          >
+            <option value=''>Select a Folder...</option>
             {folders}
           </select>
-          <div className='Note__dates' value={currentDate}/>
-          <button type='submit' disabled={
-    this.validateName(this.state.noteName)} onClick={() => this.props.history.goBack()}>Add!</button>
+          <div className='Note__dates' value={currentDate} />
+          <button
+            type='submit'
+            disabled={this.validateName(this.state.noteName)}
+            onClick={() => this.props.history.goBack()}
+          >
+            Add!
+          </button>
         </form>
-        </div>
+      </div>
     );
   }
 }
@@ -89,4 +101,4 @@ export default class AddNote extends Component {
 AddNote.propTypes = {
   changeHandler: PropTypes.func,
   addNote: PropTypes.func
-}
+};

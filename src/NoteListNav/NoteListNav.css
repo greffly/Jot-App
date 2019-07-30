@@ -1,6 +1,10 @@
+.NoteListNav {
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
 .NoteListNav__list {
   list-style-type: none;
-  margin: 121px 0 0;
   padding: 0;
 }
 
@@ -28,15 +32,16 @@
   text-decoration: none;
 }
 .NoteListNav__folder-link:hover {
-  color: #ffb72f;
+  color: white;
+  background-color: #dbb1a1;
   cursor: pointer;
 }
 .NoteListNav__folder-link.active {
-  background-color: #102541;
+  background-color: #dbb1a1;
 }
 
 .NoteListNav__num-notes {
-  color: #adadad;
+  color: #6f6e6e;
   display: block;
   float: right;
   font-size: 10px;
