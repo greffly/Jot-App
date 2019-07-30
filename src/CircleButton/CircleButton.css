@@ -7,14 +7,10 @@
   font-size: 12px;
   font-weight: bold;
   height: 50px;
-  padding: 8px;
+  padding: 10px 12px;
   text-align: center;
   text-decoration: none;
   width: 100px;
-}
-
-a.NavCircleButton {
-  padding: 10px 8px;
 }
 
 .NavCircleButton:hover {

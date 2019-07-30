@@ -105,6 +105,22 @@ export default {
       folderId: 'b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1',
       content:
         'Tenetur deleniti vero. Qui et sit voluptatem et dolor voluptas. Aut adipisci autem dolorem ad excepturi ut facere.\n \rQuos recusandae vitae earum minima quidem sapiente repellat. Veniam inventore ut. Ad quibusdam aliquam id in nihil iste qui nobis. Quidem distinctio eos explicabo.\n \rEa enim rerum deleniti quo earum. Provident fugit eum dolore sequi nobis. Architecto molestias odio et doloremque pariatur facere modi. Eum et est blanditiis delectus at est maiores vel velit. Eligendi velit dicta enim omnis.'
+    },
+    {
+      id: 'd26e1074-ffaf-11e8-8eb2-f2801f1b9fd1',
+      name: 'Kitchen Remodel',
+      modified: '2018-02-05T00:00:00.000Z',
+      folderId: 'b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1',
+      content:
+        'Tenetur deleniti vero. Qui et sit voluptatem et dolor voluptas. Aut adipisci autem dolorem ad excepturi ut facere.\n \rQuos recusandae vitae earum minima quidem sapiente repellat. Veniam inventore ut. Ad quibusdam aliquam id in nihil iste qui nobis. Quidem distinctio eos explicabo.\n \rEa enim rerum deleniti quo earum. Provident fugit eum dolore sequi nobis. Architecto molestias odio et doloremque pariatur facere modi. Eum et est blanditiis delectus at est maiores vel velit. Eligendi velit dicta enim omnis.'
+    },
+    {
+      id: 'd26e1074-ffaf-11e8-8eb2-f2801f1b9fd1',
+      name: 'Favorite Dog Breeds',
+      modified: '2018-02-05T00:00:00.000Z',
+      folderId: 'Important',
+      content:
+        'Tenetur deleniti vero. Qui et sit voluptatem et dolor voluptas. Aut adipisci autem dolorem ad excepturi ut facere.\n \rQuos recusandae vitae earum minima quidem sapiente repellat. Veniam inventore ut. Ad quibusdam aliquam id in nihil iste qui nobis. Quidem distinctio eos explicabo.\n \rEa enim rerum deleniti quo earum. Provident fugit eum dolore sequi nobis. Architecto molestias odio et doloremque pariatur facere modi. Eum et est blanditiis delectus at est maiores vel velit. Eligendi velit dicta enim omnis.'
     }
   ]
 };
