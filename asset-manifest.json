@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Jot-App/static/css/main.cacdbf19.chunk.css",
-    "main.js": "/Jot-App/static/js/main.679007d3.chunk.js",
-    "main.js.map": "/Jot-App/static/js/main.679007d3.chunk.js.map",
+    "main.js": "/Jot-App/static/js/main.6e9ba392.chunk.js",
+    "main.js.map": "/Jot-App/static/js/main.6e9ba392.chunk.js.map",
     "runtime~main.js": "/Jot-App/static/js/runtime~main.13a31211.js",
     "runtime~main.js.map": "/Jot-App/static/js/runtime~main.13a31211.js.map",
     "static/css/2.8bb7edeb.chunk.css": "/Jot-App/static/css/2.8bb7edeb.chunk.css",
     "static/js/2.607ef82f.chunk.js": "/Jot-App/static/js/2.607ef82f.chunk.js",
     "static/js/2.607ef82f.chunk.js.map": "/Jot-App/static/js/2.607ef82f.chunk.js.map",
     "index.html": "/Jot-App/index.html",
-    "precache-manifest.ecdf93d3ef69ead0eaf57703fe6d84cd.js": "/Jot-App/precache-manifest.ecdf93d3ef69ead0eaf57703fe6d84cd.js",
+    "precache-manifest.ee64b26ebd8d51305d7a2eb691f68060.js": "/Jot-App/precache-manifest.ee64b26ebd8d51305d7a2eb691f68060.js",
     "service-worker.js": "/Jot-App/service-worker.js",
     "static/css/2.8bb7edeb.chunk.css.map": "/Jot-App/static/css/2.8bb7edeb.chunk.css.map",
     "static/css/main.cacdbf19.chunk.css.map": "/Jot-App/static/css/main.cacdbf19.chunk.css.map",
