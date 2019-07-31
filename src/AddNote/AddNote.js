@@ -15,7 +15,7 @@ export default class AddNote extends Component {
     e.preventDefault();
     this.props.addNote({
       id: uuid(),
-      name: this.state.noteName,
+      name: this.state.noteName.value,
       content: this.state.noteContent,
       folderId: this.state.folderId,
       modified: new Date().toISOString()
