@@ -128,7 +128,7 @@ class App extends Component {
         <nav className='App__nav'>{this.renderNavRoutes()}</nav>
         <header className='App__header'>
           <h1 className='siteTitle'>
-            <Link to='/'>Jot</Link>
+            <Link to='/Jot-App/'>Jot</Link>
           </h1>
         </header>
         <div className='NoteListMain__button-container'>
