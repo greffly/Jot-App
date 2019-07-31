@@ -1,7 +1,7 @@
 {
-  "name": "noteful-client",
+  "name": "jot-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "http://greffly.github.io/Jot-App/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
