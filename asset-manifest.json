@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Jot-App/static/css/main.ea8931cb.chunk.css",
+    "main.css": "/Jot-App/static/css/main.0a583eea.chunk.css",
     "main.js": "/Jot-App/static/js/main.8b5c1655.chunk.js",
     "main.js.map": "/Jot-App/static/js/main.8b5c1655.chunk.js.map",
     "runtime~main.js": "/Jot-App/static/js/runtime~main.13a31211.js",
@@ -9,10 +9,10 @@
     "static/js/2.607ef82f.chunk.js": "/Jot-App/static/js/2.607ef82f.chunk.js",
     "static/js/2.607ef82f.chunk.js.map": "/Jot-App/static/js/2.607ef82f.chunk.js.map",
     "index.html": "/Jot-App/index.html",
-    "precache-manifest.ed0f717f94d35da8466649993e31ca73.js": "/Jot-App/precache-manifest.ed0f717f94d35da8466649993e31ca73.js",
+    "precache-manifest.d01352fc39c979106299f8da13876a99.js": "/Jot-App/precache-manifest.d01352fc39c979106299f8da13876a99.js",
     "service-worker.js": "/Jot-App/service-worker.js",
     "static/css/2.8bb7edeb.chunk.css.map": "/Jot-App/static/css/2.8bb7edeb.chunk.css.map",
-    "static/css/main.ea8931cb.chunk.css.map": "/Jot-App/static/css/main.ea8931cb.chunk.css.map",
+    "static/css/main.0a583eea.chunk.css.map": "/Jot-App/static/css/main.0a583eea.chunk.css.map",
     "static/media/index.css": "/Jot-App/static/media/roboto-latin-900italic.bc833e72.woff"
   }
 }

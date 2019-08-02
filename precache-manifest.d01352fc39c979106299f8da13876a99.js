@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ae58e990d226398de1452dd58558a00c",
+    "revision": "c5c27eed59b249484392a36d9b39b784",
     "url": "/Jot-App/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Jot-App/static/css/2.8bb7edeb.chunk.css"
   },
   {
-    "revision": "4f7dbb62f7ff5d00801f",
-    "url": "/Jot-App/static/css/main.ea8931cb.chunk.css"
+    "revision": "c9e589af96c49ea8a696",
+    "url": "/Jot-App/static/css/main.0a583eea.chunk.css"
   },
   {
     "revision": "7387438706d3efa2db44",
     "url": "/Jot-App/static/js/2.607ef82f.chunk.js"
   },
   {
-    "revision": "4f7dbb62f7ff5d00801f",
+    "revision": "c9e589af96c49ea8a696",
     "url": "/Jot-App/static/js/main.8b5c1655.chunk.js"
   },
   {
